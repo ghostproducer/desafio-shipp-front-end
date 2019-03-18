@@ -1,27 +1,26 @@
-
 .first {
   background-color: #7967FF;
   height: 1080px;
   width: 128px
- }
- 
- .second {
+}
+
+.second {
   background-color: white;
   height: 1080px;
   width: 992px
- }
- 
- .third {
+}
+
+.third {
   background: gray;
   height: 1080px;
   width: 1120px
- }
- 
- .wrapper {
-   display: flex;
-   flex-direction: row;
-   
- }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+
+}
 
 
 
@@ -31,158 +30,159 @@
 
 /* Create three unequal columns that floats next to each other */
 .column {
-    float: left;
-    height: 1080px; /* Should be removed. Only for demonstration */
-  }
+  float: left;
+  height: 1080px;
+  /* Should be removed. Only for demonstration */
+}
 
 
-  .left {
-    width: 128px;
-  }
-  
-
-  
-  .middle {
-    width: 992px;
-  }
-
-  #circle-box {
-      margin:10px;
-  }
-
-
-  .right {
-    width: 1120px;
-  }
-
-
-  /* Making that Circle Flower Logo */
-
- 
-  
-  .box{
-    position: relative;
-    margin: auto;
-    display: block;
-    width: 64px;
-    height: 64px;
-    background: none;
-  
-  }
-  
-  .head{
-    position: absolute;
-    top:20px;
-    width: 64px;
-    height: 64px;
-    background: #ffffff;
-    border-radius: 50%;
-  }
-  
-  .head-copy{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: #ffffff;
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  .ear-center{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 25%;
-    background: #ffffff;
-    border-radius: 100%;
-    z-index: 1;
-  }
-  
-  .ear-top{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 0%;
-    background: #7967FF;
-    border-radius: 100%;
-    z-index: 1;
-  }
-  
-  .ear-right{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 50%;
-    top: 25%;
-    background: #7967FF;
-    border-radius: 100%;
-    z-index: 1;
-  }
-  
-  .ear-bottom{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 25%;
-    top: 50%;
-    background: #7967FF;
-    border-radius: 100%;
-    z-index: 1;
-  }
-  
-  .ear-left{
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    left: 0%;
-    top: 25%;
-    background: #7967FF;
-    border-radius: 100%;
-    z-index: 1;
-  }
-
-
-  .adress-box {
-    margin-top: 100%;
-    margin-left: -300%;
-    font-size: 53px;
-  }
+.left {
+  width: 128px;
+}
 
 
 
-  .box2{
-    position: relative;
-    margin: auto;
-    display: block;
-    width: 64px;
-    height: 64px;
-    background: none;
-    top:32px
-  
-  }
+.middle {
+  width: 992px;
+}
 
-  .entrega-box {
-    margin-top: 100%;
-    margin-left: -300%;
-    font-size: 27px;
-    width: 500%
-  }
+#circle-box {
+  margin: 10px;
+}
 
-  #site-search {
-    margin-left: -300%;
-    margin-top: 20px;
-    width: 600%;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom-color: #9F9F9F;
-    color: #9F9F9F
-  }
-  
 
-.check{
+.right {
+  width: 1120px;
+}
+
+
+/* Making that Circle Flower Logo */
+
+
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: none;
+
+}
+
+.head {
+  position: absolute;
+  top: 20px;
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.head-copy {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ear-center {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 25%;
+  background: #ffffff;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ear-top {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 0%;
+  background: #7967FF;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ear-right {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  top: 25%;
+  background: #7967FF;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ear-bottom {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  top: 50%;
+  background: #7967FF;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.ear-left {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  left: 0%;
+  top: 25%;
+  background: #7967FF;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+
+.adress-box {
+  margin-top: 100%;
+  margin-left: -450%;
+  font-size: 53px;
+}
+
+
+
+.box2 {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: none;
+  top: 32px;
+  margin-left: 34%
+}
+
+.entrega-box {
+  margin-top: 100%;
+  margin-left: -300%;
+  font-size: 27px;
+  width: 500%
+}
+
+#site-search {
+  margin-left: -300%;
+  margin-top: 20px;
+  width: 600%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #9F9F9F;
+  color: #9F9F9F
+}
+
+
+.check {
   position: relative;
   margin: auto;
   display: block;
@@ -191,57 +191,56 @@
   width: 100%;
   height: 2em;
   background: none;
-  top:128px;
+  top: 128px;
   display: block;
+  margin-left: -37%;
 
 }
 
 
-  .box3{
-    position: relative;
-    margin-left: 25%;
-    display: block;
-    height: 64px;
-    background: none;
-    top:100px;
-    display: block;
-    color: #9F9F9F
+.box3 {
+  position: relative;
+  margin-left: 25%;
+  display: block;
+  height: 64px;
+  background: none;
+  top: 100px;
+  display: block;
+  color: #9F9F9F
+}
 
-  
-  
-  }
+.box3:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
 
-  .box3:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
+.box4 {
+  position: relative;
+  margin: auto;
+  display: block;
+  width: 64px;
+  height: 64px;
+  background: none;
+  top: 100px;
+  margin-left: 34%;
+}
 
-  .box4{
-    position: relative;
-    margin: auto;
-    display: block;
-    width: 64px;
-    height: 64px;
-    background: none;
-    top:100px
-  
-  }
-
-  #add {
-    background-color:#7967FF;
-    border-color: #7967FF;
-    position: relative;
-    margin: auto;
-    display: block;
-    top:200px;    height: 64px;
-    width: 414px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 0px;
-    padding-left: 0px;border-radius: 16px;
-  }
-
+#add {
+  background-color: #7967FF;
+  border-color: #7967FF;
+  position: relative;
+  margin: auto;
+  display: block;
+  top: 200px;
+  height: 64px;
+  width: 414px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border-radius: 16px;
+}
 
 
 
@@ -252,84 +251,89 @@
 
 
 
-   /* Always set the map height explicitly to define the size of the div
+
+/* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
-       #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #description {
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-      }
+#map {
+  height: 100%;
+}
 
-      #infowindow-content .title {
-        font-weight: bold;
-      }
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-      #infowindow-content {
-        display: none;
-      }
+#description {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+}
 
-      #map #infowindow-content {
-        display: inline;
-      }
+#infowindow-content .title {
+  font-weight: bold;
+}
 
-      .pac-card {
-        margin: 10px 10px 0 0;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        font-family: Roboto;
-      }
+#infowindow-content {
+  display: none;
+}
 
-      #pac-container {
-        padding-bottom: 12px;
-        margin-right: 12px;
-      }
+#map #infowindow-content {
+  display: inline;
+}
 
-      .pac-controls {
-        display: inline-block;
-        padding: 5px 11px;
-      }
+.pac-card {
+  margin: 10px 10px 0 0;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+}
 
-      .pac-controls label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
 
-      #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 400px;
-      }
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
 
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
 
-      #title {
-        color: #fff;
-        background-color: #4d90fe;
-        font-size: 25px;
-        font-weight: 500;
-        padding: 6px 12px;
-      }
-      #target {
-        width: 345px;
-      }
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+#title {
+  color: #fff;
+  background-color: #4d90fe;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 6px 12px;
+}
+
+#target {
+  width: 345px;
+}
