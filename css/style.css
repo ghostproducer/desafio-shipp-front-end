@@ -337,3 +337,11 @@ body {
 #target {
   width: 345px;
 }
+
+
+
+/* Google Maps Layout  */
+
+.gm-style-mtc {
+  display: none;
+}
