@@ -96,7 +96,7 @@
             </div>
             <div class="box2">
                 <p class="entrega-box">Endereço de entrega:</p>
-                <input type="text" id="site-search" name="endereco" placeholder="🔍 Buscar endereço">
+                <input type="text" id="pac-input" name="endereco" placeholder="🔍 Buscar endereço">
             </div>
             <input class="check" name="options" type="radio" value="1" />
             <label class="box3">Sem complemento
@@ -112,7 +112,14 @@
 
 
             <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
-            <div id="map"></div>
+            <div id="map">
+
+<div id="infowindow-content">
+    <img src="" width="16" height="16" id="place-icon">
+    <span id="place-name" class="title"></span><br>
+    <span id="place-address"></span>
+</div>
+            </div>
             <script>
                 // This example adds a search box to a map, using the Google Place Autocomplete
                 // feature. People can enter geographical searches. The search box will return a
@@ -127,9 +134,82 @@
                         center: { lat: -20.2601512, lng: -40.262767 },
                         zoom: 14,
                         mapTypeId: 'roadmap',
-                        disableDefaultUI: true
+                        // disableDefaultUI: true
                     });
+
+
+                    var card = document.getElementById('pac-card');
+                    var input = document.getElementById('pac-input');
+                    var types = document.getElementById('type-selector');
+                    var strictBounds = document.getElementById('strict-bounds-selector');
                     
+map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+
+
+                    var autocomplete = new google.maps.places.Autocomplete(input);
+
+autocomplete.bindTo('bounds', map);
+
+// Bind the map's bounds (viewport) property to the autocomplete object,
+// so that the autocomplete requests use the current map bounds for the
+// bounds option in the request.
+autocomplete.bindTo('bounds', map);
+
+
+// Set the data fields to return when the user selects a place.
+autocomplete.setFields(
+['address_components', 'geometry', 'icon', 'name']);
+
+
+
+var infowindow = new google.maps.InfoWindow();
+var infowindowContent = document.getElementById('infowindow-content');
+infowindow.setContent(infowindowContent);
+var marker = new google.maps.Marker({
+map: map,
+anchorPoint: new google.maps.Point(0, -29)
+});
+
+
+
+
+autocomplete.addListener('place_changed', function () {
+                infowindow.close();
+                marker.setVisible(false);
+                var place = autocomplete.getPlace();
+                if (!place.geometry) {
+                    // User entered the name of a Place that was not suggested and
+                    // pressed the Enter key, or the Place Details request failed.
+                    window.alert("No details available for input: '" + place.name + "'");
+                    return;
+                }
+
+                // If the place has a geometry, then present it on a map.
+                if (place.geometry.viewport) {
+                    map.fitBounds(place.geometry.viewport);
+                } else {
+                    map.setCenter(place.geometry.location);
+                    map.setZoom(14); 
+                }
+                marker.setPosition(place.geometry.location);
+                marker.setVisible(true);
+
+                var address = '';
+                if (place.address_components) {
+                    address = [
+                        (place.address_components[0] && place.address_components[0].short_name || ''),
+                        (place.address_components[1] && place.address_components[1].short_name || ''),
+                        (place.address_components[2] && place.address_components[2].short_name || '')
+                    ].join(' ');
+                }
+
+                infowindowContent.children['place-icon'].src = place.icon;
+                infowindowContent.children['place-name'].textContent = place.name;
+                infowindowContent.children['place-address'].textContent = address;
+                infowindow.open(map, marker);
+            });
+
+
                     // // Create the search box and link it to the UI element.
                     // var input = document.getElementById('pac-input');
                     // var searchBox = new google.maps.places.SearchBox(input);
@@ -192,7 +272,7 @@
 
             </script>
             <script
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpJpPJzEJFE-vItcKFG_pLrzJqQ_FsLuc&libraries=places&callback=initAutocomplete"
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9k8lB1FmjeIBzCw_sbwgOwT5wgF4zKMk&libraries=places&callback=initAutocomplete"
                 async defer></script>
 
 

@@ -146,7 +146,7 @@
 
 .adress-box {
   margin-top: 100%;
-  margin-left: -450%;
+  margin-left: -460%;
   font-size: 53px;
 }
 
@@ -194,6 +194,7 @@
   top: 128px;
   display: block;
   margin-left: -37%;
+  left:2%
 
 }
 
@@ -316,10 +317,11 @@ body {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 300;
-  margin-left: 12px;
+  margin-left: -300%;
   padding: 0 11px 0 13px;
   text-overflow: ellipsis;
   width: 400px;
+  margin-top: 27%;
 }
 
 #pac-input:focus {
