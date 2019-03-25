@@ -15,14 +15,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </head>
 <style>
@@ -41,52 +41,16 @@
 
 <body>
 
-    <!-- 
-    <div class="column left" style="background-color:#7967FF; opacity: 100%">
-        <div class="box">
-
-            <div class="head">
-
-                <div class="ear-top"></div>
-                <div class="ear-right"></div>
-                <div class="ear-bottom"></div>
-                <div class="ear-left"></div>
-                <div class="ear-center"></div>
-
-
-            </div>
-        </div>
-    </div>
-
-    <div class="column middle" style="background-color:#FFFFFF;">
-        <div class="box">
-            <h2 class="adress-box" style="font-family:'Gotham Bold'">Adicionar Endereço</h2>
-        </div>
-        <div class="box2">
-            <p class="entrega-box">Endereço de Entrega</p>
-        </div>
-    </div>
-
-
-    <div class="column right" style="background-color:#111;">
-        <h2>Column 3</h2>
-        <p>Some text..</p>
-    </div> -->
-
-
     <div class="wrapper">
         <div class="first">
             <div class="box">
 
                 <div class="head">
-
                     <div class="ear-top"></div>
                     <div class="ear-right"></div>
                     <div class="ear-bottom"></div>
                     <div class="ear-left"></div>
                     <div class="ear-center"></div>
-
-
                 </div>
             </div>
         </div>
@@ -109,32 +73,25 @@
         </div>
         <div class="third">
 
-
-
-            <!-- <input id="pac-input" class="controls" type="text" placeholder="Search Box"> -->
             <div id="map">
 
-<div id="infowindow-content">
-    <img src="" width="16" height="16" id="place-icon">
-    <span id="place-name" class="title"></span><br>
-    <span id="place-address"></span>
-</div>
+                <div id="infowindow-content">
+                    <img src="" width="16" height="16" id="place-icon">
+                    <span id="place-name" class="title"></span><br>
+                    <span id="place-address"></span>
+                </div>
             </div>
             <script>
-                // This example adds a search box to a map, using the Google Place Autocomplete
-                // feature. People can enter geographical searches. The search box will return a
-                // pick list containing a mix of places and predicted search terms.
-
-                // This example requires the Places library. Include the libraries=places
-                // parameter when you first load the API. For example:
-                // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
+                // Google Maps 
                 function initAutocomplete() {
                     var map = new google.maps.Map(document.getElementById('map'), {
-                        center: { lat: -20.2601512, lng: -40.262767 },
+                        center: {
+                            lat: -20.2601512,
+                            lng: -40.262767
+                        },
                         zoom: 14,
                         mapTypeId: 'roadmap',
-                        // disableDefaultUI: true
+                        disableDefaultUI: true
                     });
 
 
@@ -142,72 +99,70 @@
                     var input = document.getElementById('pac-input');
                     var types = document.getElementById('type-selector');
                     var strictBounds = document.getElementById('strict-bounds-selector');
-                    
-map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
+
+                    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(card);
 
 
                     var autocomplete = new google.maps.places.Autocomplete(input);
 
-autocomplete.bindTo('bounds', map);
+                    autocomplete.bindTo('bounds', map);
 
-// Bind the map's bounds (viewport) property to the autocomplete object,
-// so that the autocomplete requests use the current map bounds for the
-// bounds option in the request.
-autocomplete.bindTo('bounds', map);
-
-
-// Set the data fields to return when the user selects a place.
-autocomplete.setFields(
-['address_components', 'geometry', 'icon', 'name']);
+                    // Bind the map's bounds (viewport) property to the autocomplete object,
+                    // so that the autocomplete requests use the current map bounds for the
+                    // bounds option in the request.
+                    autocomplete.bindTo('bounds', map);
 
 
+                    // Set the data fields to return when the user selects a place.
+                    autocomplete.setFields(
+                        ['address_components', 'geometry', 'icon', 'name']);
 
-var infowindow = new google.maps.InfoWindow();
-var infowindowContent = document.getElementById('infowindow-content');
-infowindow.setContent(infowindowContent);
-var marker = new google.maps.Marker({
-map: map,
-anchorPoint: new google.maps.Point(0, -29)
-});
+                    var infowindow = new google.maps.InfoWindow();
+                    var infowindowContent = document.getElementById('infowindow-content');
+                    infowindow.setContent(infowindowContent);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        anchorPoint: new google.maps.Point(0, -29)
+                    });
 
+                    autocomplete.addListener('place_changed', function () {
+                        infowindow.close();
+                        marker.setVisible(false);
+                        var place = autocomplete.getPlace();
+                        if (!place.geometry) {
+                            // User entered the name of a Place that was not suggested and
+                            // pressed the Enter key, or the Place Details request failed.
+                            window.alert("No details available for input: '" + place.name + "'");
+                            return;
+                        }
 
+                        // If the place has a geometry, then present it on a map.
+                        if (place.geometry.viewport) {
+                            map.fitBounds(place.geometry.viewport);
+                        } else {
+                            map.setCenter(place.geometry.location);
+                            map.setZoom(14);
+                        }
+                        marker.setPosition(place.geometry.location);
+                        marker.setVisible(true);
 
+                        var address = '';
+                        if (place.address_components) {
+                            address = [
+                                (place.address_components[0] && place.address_components[0].short_name ||
+                                    ''),
+                                (place.address_components[1] && place.address_components[1].short_name ||
+                                    ''),
+                                (place.address_components[2] && place.address_components[2].short_name ||
+                                    '')
+                            ].join(' ');
+                        }
 
-autocomplete.addListener('place_changed', function () {
-                infowindow.close();
-                marker.setVisible(false);
-                var place = autocomplete.getPlace();
-                if (!place.geometry) {
-                    // User entered the name of a Place that was not suggested and
-                    // pressed the Enter key, or the Place Details request failed.
-                    window.alert("No details available for input: '" + place.name + "'");
-                    return;
-                }
-
-                // If the place has a geometry, then present it on a map.
-                if (place.geometry.viewport) {
-                    map.fitBounds(place.geometry.viewport);
-                } else {
-                    map.setCenter(place.geometry.location);
-                    map.setZoom(14); 
-                }
-                marker.setPosition(place.geometry.location);
-                marker.setVisible(true);
-
-                var address = '';
-                if (place.address_components) {
-                    address = [
-                        (place.address_components[0] && place.address_components[0].short_name || ''),
-                        (place.address_components[1] && place.address_components[1].short_name || ''),
-                        (place.address_components[2] && place.address_components[2].short_name || '')
-                    ].join(' ');
-                }
-
-                infowindowContent.children['place-icon'].src = place.icon;
-                infowindowContent.children['place-name'].textContent = place.name;
-                infowindowContent.children['place-address'].textContent = address;
-                infowindow.open(map, marker);
-            });
+                        infowindowContent.children['place-icon'].src = place.icon;
+                        infowindowContent.children['place-name'].textContent = place.name;
+                        infowindowContent.children['place-address'].textContent = address;
+                        infowindow.open(map, marker);
+                    });
 
 
                     // // Create the search box and link it to the UI element.
@@ -269,29 +224,10 @@ autocomplete.addListener('place_changed', function () {
                         map.fitBounds(bounds);
                     });
                 }
-
             </script>
             <script
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9k8lB1FmjeIBzCw_sbwgOwT5wgF4zKMk&libraries=places&callback=initAutocomplete"
                 async defer></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     </div>
 
@@ -301,7 +237,6 @@ autocomplete.addListener('place_changed', function () {
 </html>
 
 <script>
-
     // Script to uncheck complement radio button
     $('input[type="radio"]').mousedown(function () {
         if (this.checked) {
